@@ -185,7 +185,6 @@ export default {
   height: 100vh;
   padding: 2%
 }
-
 .mt-5 {
   margin-top: 30px;
 }
