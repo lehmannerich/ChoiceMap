@@ -88,38 +88,14 @@ export default {
     return {
       criteria: [
         {
-        title: '',
-        imp: NaN
-        },
-        {
-        title: '',
-        imp: NaN
-        },
-        {
-        title: '',
-        imp: NaN
+        title: 'Fun',
+        imp: 5
         }
       ],
       options: [
         {
-        name: '',
-        matches:[]
-        },
-        {
-        name: '',
-        matches:[]
-        },
-        {
-        name: '',
-        matches:[]
-        },
-        {
-        name: '',
-        matches:[]
-        },
-        {
-        name: '',
-        matches:[]
+        name: 'Exploding Kittens',
+        matches:[5]
         }
       ]
     }
