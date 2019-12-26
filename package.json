@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "@nuxtjs/bulma": "^1.2.1",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",

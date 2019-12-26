@@ -1,9 +1,9 @@
 <template>
   <div>
 
-  <section class="flex-container has-background-warning">
+  <section class="">
 
-      <div class="left has-background-danger">
+      <div class="view has-background-danger">
 
       <div class="field">
         <label class="label has-text-white is-large">Criteria
@@ -24,14 +24,14 @@
         </div>
       </div>
 
-      <div class="buttons is-at-bottom">
-        <a v-on:click="addCriterium()" class="button is-white "><strong>Add Criterium</strong></a>
+      <div class="buttons">
+        <a v-on:click="addCriterium()" class="button is-white "><strong>Add</strong></a>
         <a v-on:click="removeCriterium()" class="button is-light">Remove</a>
       </div>
 
       </div>
 
-      <div class="right has-background-info">
+      <div class="view has-background-info">
 
       <div class="field">
         <label class="label has-text-white is-large">Options
@@ -42,7 +42,8 @@
           <input v-model="option.name" class="input" type="text" placeholder="Text input">
         </div>
         <div v-for="(criterium, key) in  criteria" class="select">
-          <select v-model="option.matches[key]">
+          <ul><li>
+            <select v-model="option.matches[key]">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -50,17 +51,19 @@
             <option>5</option>
           </select>
           <p class="has-text-white">{{criterium.title}}</p>
+            </li></ul>
+
         </div>
       </div>
 
-      <div class="buttons is-at-bottom">
-        <a v-on:click="addOption()" class="button is-white "><strong>Add Option</strong></a>
+      <div class="buttons">
+        <a v-on:click="addOption()" class="button is-white "><strong>Add</strong></a>
         <a v-on:click="removeOption()" class="button is-light">Remove</a>
       </div>
 
       </div>
 
-      <div class="results has-background-warning">
+      <div class="view has-background-warning">
         <div class="field">
           <label class="label is-large">Ranking
           </label>
@@ -145,21 +148,9 @@ export default {
 </script>
 
 <style>
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  height: 100vh;
-}
-.left, .right{
-  flex: 2;
-  height: 100vh;
-  padding: 2%
-}
-.results {
-  flex:1;
-  height: 100vh;
-  padding: 2%
+.view {
+  min-height: 100vh;
+  padding: 20px;
 }
 .mt-5 {
   margin-top: 30px;
@@ -183,5 +174,4 @@ export default {
   position: absolute;
   bottom: 25px;
 }
-
 </style>
